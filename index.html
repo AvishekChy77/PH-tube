@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              txt: "rgba(37, 37, 37, 0.70)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      body {
+        background-color: #f8f8f8;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body class="bg-white">
+    <header class="container mx-auto">
+      <!-- navbar -->
+      <div class="navbar my-10">
+        <div class="w-1/3 md:w-1/2 justify-start">
+          <figure>
+            <img class="w-24 md:w-auto" src="./Logo.png" alt="" srcset="" />
+          </figure>
+        </div>
+        <div class="navbar-center">
+          <a
+            onclick="sorting()"
+            class="btn btn-sm md:btn-md normal-case font-medium text-xl"
+            >Sort by view</a
+          >
+        </div>
+        <div class="w-1/3 md:w-1/2 justify-end">
+          <button
+            onclick="openBlog()"
+            class="btn btn-sm md:btn-md bg-[#FF1F3D] hover:bg-[#f7596e] text-white"
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+      <hr />
+      <!-- tab -->
+      <div class="w-full my-5">
+        <div
+          id="tab-container"
+          class="tabs flex gap-5 p-5 justify-center m-auto text-center"
+        ></div>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <section class="mx-2">
+        <div
+          id="card-container"
+          class="grid gap-5 text-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        ></div>
+      </section>
+      <div id="modal-container"></div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

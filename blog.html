@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+      }
+    </style>
+    <title>Blog Questions</title>
+  </head>
+  <body class="bg-slate-900">
+    <div
+      class="container pt-12 mx-auto text-center text-5xl text-teal-600 font-bold"
+    >
+      Q & A
+    </div>
+    <section class="container mt-16 mx-auto text-center text-white">
+      <div class="p-10 mb-5">
+        <div class="text-3xl mb-5 font-bold">
+          * Discuss the scope of var, let, and const
+        </div>
+        <div class="text-lg text-justify">
+          One of the features that came with ES6 is the addition of let and
+          const, which can be used for variable declaration. The question is,
+          what makes them different from good ol' var which we've been using? If
+          you are still not clear about this, then this article is for you. In
+          this article, we'll discuss var, let and const with respect to their
+          scope, use, and hoisting. As you read, take note of the differences
+          between them that I'll point out. <br /><br />
+          Variables declared with var can have a global or local scope. Global
+          scope is for variables declared outside functions, while local scope
+          is for variables declared inside functions.Variables declared with var
+          can be redeclared and reassigned.Variables declared with var are
+          hoisted to the top of their global or local scope, which makes them
+          accessible before the line they are declared. <br /><br />
+          Variables declared with let can have a global, local, or block scope.
+          Block scope is for variables declared in a block. A block in
+          JavaScript involves opening and closing curly braces.Just like var,
+          variables declared with let can be reassigned to other values, but
+          they cannot be redeclared.Variables declared with let are hoisted to
+          the top of their global, local, or block scope, but their hoisting is
+          a little different from the one with var. var variables are hoisted
+          with a default value of undefined, which makes them accessible before
+          their line of declaration (as we've seen above). But, let variables
+          are hoisted without a default initialization. So when you try to
+          access such variables, instead of getting undefined, or variable is
+          not defined error, you get cannot access variable before
+          initialization. <br /><br />
+          Variables declared with const are similar to let in regards to scope.
+          Such variables can have a global, local, or block scope.const is
+          different from var and let. const is used for declaring constant
+          variables which are variables with values that cannot be changed. So
+          such variables cannot be redeclared, and neither can they be
+          reassigned to other values.Variables declared with const, just like
+          let, are hoisted to the top of their global, local, or block scope but
+          without a default initialization.
+        </div>
+      </div>
+      <div class="p-10 mb-5">
+        <div class="text-3xl mb-5 font-bold">
+          * Tell us the use cases of null and undefined
+        </div>
+        <div class="text-lg text-justify">
+          Null in JavaScript means an empty value and is also a primitive type
+          in JavaScript. The variable which has been assigned as null contains
+          no value. Undefined, on the other hand, means the variable has been
+          declared, but its value has not been assigned.The typeof() operator
+          returns the type as an object for a variable whose value is assigned
+          as null and for undefined value the typeof() operator returns
+          undefined.
+        </div>
+      </div>
+      <div class="p-10 pb-5">
+        <div class="text-3xl mb-5 font-bold">
+          * What do you mean by REST API?
+        </div>
+        <div class="text-lg text-justify">
+          An API, or application programming interface, is a set of rules that
+          define how applications or devices can connect to and communicate with
+          each other. A REST API is an API that conforms to the design
+          principles of the REST, or representational state transfer
+          architectural style. For this reason, REST APIs are sometimes referred
+          to RESTful APIs. <br /><br />
+          First defined in 2000 by computer scientist Dr. Roy Fielding in his
+          doctoral dissertation, REST provides a relatively high level of
+          flexibility and freedom for developers. This flexibility is just one
+          reason why REST APIs have emerged as a common method for connecting
+          components and applications in a microservices architecture.
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
